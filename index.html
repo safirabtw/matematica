@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Resolução Teste AM - Versão B</title>
+  <style>
+    :root {
+      --bg: #000000;
+      --card-bg: #121214;
+      --card-border: #27272a;
+      --text: #f4f4f5;
+      --text-muted: #a1a1aa;
+      --accent: #38bdf8;
+      --accent-dim: rgba(56, 189, 248, 0.15);
+      --box-final: #0f2718;
+      --box-final-border: #22c55e;
+      --box-final-text: #4ade80;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    body {
+      background-color: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      padding: 8px;
+      line-height: 1.4;
+      font-size: 14px;
+    }
+
+    header {
+      border-bottom: 2px solid var(--accent);
+      padding-bottom: 8px;
+      margin-bottom: 12px;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 16px;
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .sub {
+      font-size: 11px;
+      color: var(--text-muted);
+    }
+
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 10px;
+      padding: 10px;
+      margin-bottom: 14px;
+    }
+
+    .card-title {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--accent);
+      border-bottom: 1px dashed var(--card-border);
+      padding-bottom: 6px;
+      margin-bottom: 8px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .badge {
+      background: var(--accent-dim);
+      color: var(--accent);
+      font-size: 10px;
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+
+    .step-row {
+      margin-bottom: 8px;
+      padding-bottom: 6px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .step-row:last-child {
+      border-bottom: none;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+
+    .label {
+      font-size: 10px;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      font-weight: 600;
+      letter-spacing: 0.4px;
+      display: block;
+      margin-bottom: 2px;
+    }
+
+    .math-scroll {
+      overflow-x: auto;
+      white-space: nowrap;
+      padding: 3px 0;
+      -webkit-overflow-scrolling: touch;
+      font-size: 15px;
+    }
+
+    /* MathML Style Adjustments */
+    math {
+      font-family: "STIX Two Math", "Cambria Math", "Latin Modern Math", serif;
+    }
+
+    .final-box {
+      margin-top: 8px;
+      background: var(--box-final);
+      border: 1px solid var(--box-final-border);
+      border-radius: 6px;
+      padding: 8px;
+      color: var(--box-final-text);
+      font-weight: 600;
+    }
+
+    .final-box .label {
+      color: #86efac;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>1.º Teste de Análise Matemática</h1>
+    <div class="sub">ISEC • LEEC • 28 Out 2025 • Versão B</div>
+  </header>
+
+  <!-- 1.(a) -->
+  <section class="card">
+    <div class="card-title">
+      <span>1.(a) Função Inversa</span>
+      <span class="badge">1.5 val</span>
+    </div>
+
+    <div class="step-row">
+      <span class="label">Função Dada</span>
+      <div class="math-scroll">
+        <math><mi>f</mi><mo>(</mo><mi>x</mi><mo>)</mo><mo>=</mo><mn>3</mn><mi>arccos</mi><mo>(</mo><mfrac><mrow><mn>7</mn><mi>x</mi></mrow><mn>4</mn></mfrac><mo>)</mo></math>
+      </div>
+    </div>
+
+    <div class="step-row">
+      <span class="label">Restrição do Domínio</span>
+      <div class="math-scroll">
+        <math>
+          <mo>-</mo><mn>1</mn><mo>≤</mo><mfrac><mrow><mn>7</mn><mi>x</mi></mrow><mn>4</mn></mfrac><mo>≤</mo><mn>1</mn>
+          <mo>⇔</mo>
+          <mo>-</mo><mfrac><mn>4</mn><mn>7</mn></mfrac><mo>≤</mo><mi>x</mi><mo>≤</mo><mfrac><mn>4</mn><mn>7</mn></mfrac>
+          <mo>⇒</mo>
+          <msub><mi>D</mi><mi>f</mi></msub><mo>=</mo><mo>[</mo><mo>-</mo><mfrac><mn>4</mn><mn>7</mn></mfrac><mo>,</mo><mfrac><mn>4</mn><mn>7</mn></mfrac><mo>]</mo>
+        </math>
+      </div>
+    </div>
+
+    <div class="step-row">
+      <span class="label">Contradomínio de f</span>
+      <div class="math-scroll">
+        <math>
+          <mi>arccos</mi><mo>(</mo><mi>u</mi><mo>)</mo><mo>∈</mo><mo>[</mo><mn>0</mn><mo>,</mo><mi>π</mi><mo>]</mo>
+          <mo>⇒</mo>
+          <mn>3</mn><mo>×</mo><mo>[</mo><mn>0</mn><mo>,</mo><mi>π</mi><mo>]</mo>
+          <mo>⇒</mo>
+          <msubsup><mi>D</mi><mi>f</mi><mo>′</mo></msubsup><mo>=</mo><mo>[</mo><mn>0</mn><mo>,</mo><mn>3</mn><mi>π</mi><mo>]</mo>
+        </math>
+      </div>
+    </div>
+
+    <div class="step-row">
+      <span class="label">Relação da Inversa</span>
+      <div class="math-scroll">
+        <math>
+          <msub><mi>D</mi><msup><mi>f</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup></msub><mo>=</mo><mo>[</mo><mn>0</mn><mo>,</mo><mn>3</mn><mi>π</mi><mo>]</mo>
+          <mspace width="0.8em"/>
+          <msubsup><mi>D</mi><msup><mi>f</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>′</mo></msubsup><mo>=</mo><mo>[</mo><mo>-</mo><mfrac><mn>4</mn><mn>7</mn></mfrac><mo>,</mo><mfrac><mn>4</mn><mn>7</mn></mfrac><mo>]</mo>
+        </math>
+      </div>
+    </div>
+
+    <div class="step-row">
+      <span class="label">Isolamento de x</span>
+      <div class="math-scroll">
+        <math>
+          <mfrac><mi>y</mi><mn>3</mn></mfrac><mo>=</mo><mi>arccos</mi><mo>(</mo><mfrac><mrow><mn>7</mn><mi>x</mi></mrow><mn>4</mn></mfrac><mo>)</mo>
+          <mo>⇔</mo>
+          <mi>cos</mi><mo>(</mo><mfrac><mi>y</mi><mn>3</mn></mfrac><mo>)</mo><mo>=</mo><mfrac><mrow><mn>7</mn><mi>x</mi></mrow><mn>4</mn></mfrac>
+          <mo>⇔</mo>
+          <mi>x</mi><mo>=</mo><mfrac><mn>4</mn><mn>7</mn></mfrac><mi>cos</mi><mo>(</mo><mfrac><mi>y</mi><mn>3</mn></mfrac><mo>)</mo>
+        </math>
+      </div>
+    </div>
+
+    <div class="final-box">
+      <span class="label">Resposta Final 1.(a)</span>
+      <div class="math-scroll">
+        <math>
+          <msup><mi>f</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>:</mo><mo>[</mo><mn>0</mn><mo>,</mo><mn>3</mn><mi>π</mi><mo>]</mo><mo>→</mo><mo>[</mo><mo>-</mo><mfrac><mn>4</mn><mn>7</mn></mfrac><mo>,</mo><mfrac><mn>4</mn><mn>7</mn></mfrac><mo>]</mo>
+          <mo>,</mo><mspace width="0.5em"/>
+          <msup><mi>f</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>(</mo><mi>x</mi><mo>)</mo><mo>=</mo><mfrac><mn>4</mn><mn>7</mn></mfrac><mi>cos</mi><mo>(</mo><mfrac><mi>x</mi><mn>3</mn></mfrac><mo>)</mo>
+        </math>
+      </div>
+    </div>
+  </section>
+
+  <!-- 1.(b) -->
+  <section class="card">
+    <div class="card-title">
+      <span>1.(b) Definição de Primitiva</span>
+      <span class="badge">0.75 val</span>
+    </div>
+
+    <div class="step-row">
+      <span class="label">Critério Teórico</span>
+      <div class="math-scroll">
+        <math><mo>∫</mo><mi>g</mi><mo>(</mo><mi>x</mi><mo>)</mo><mi>d</mi><mi>x</mi><mo>=</mo><mi>F</mi><mo>(</mo><mi>x</mi><mo>)</mo><mo>+</mo><mi>c</mi><mo>⇔</mo><mo>(</mo><mi>F</mi><mo>(</mo><mi>x</mi><mo>)</mo><mo>+</mo><mi>c</mi><msup><mo>)</mo><mo>′</mo></msup><mo>=</mo><mi>g</mi><mo>(</mo><mi>x</mi><mo>)</mo></math>
+      </div>
+    </div>
+
+    <div class="step-row">
+      <span class="label">Regra de Derivação</span>
+      <div class="math-scroll">
+        <math>
+          <mo>(</mo><mi>arccos</mi><mo>(</mo><mi>u</mi><mo>)</mo><msup><mo>)</mo><mo>′</mo></msup><mo>=</mo><mo>-</mo><mfrac><msup><mi>u</mi><mo>′</mo></msup><msqrt><mrow><mn>1</mn><mo>-</mo><msup><mi>u</mi><mn>2</mn></msup></mrow></msqrt></mfrac>
+          <mo>,</mo><mspace width="0.5em"/>
+          <mi>u</mi><mo>=</mo><mfrac><mrow><mn>7</mn><mi>x</mi></mrow><mn>4</mn></mfrac><mo>⇒</mo><msup><mi>u</mi><mo>′</mo></msup><mo>=</mo><mfrac><mn>7</mn><mn>4</mn></mfrac>
+        </math>
+      </div>
+    </div>
+
+    <div class="step-row">
+      <span class="label">Cálculo e Simplificação</span>
+      <div class="math-scroll">
+        <math>
+          <mo>(</mo><mi>f</mi><mo>(</mo><mi>x</mi><mo>)</mo><mo>+</mo><mi>c</mi><msup><mo>)</mo><mo>′</mo></msup>
+          <mo>=</mo>
+          <mn>3</mn><mo>·</mo><mo>(</mo><mo>-</mo><mfrac><mfrac><mn>7</mn><mn>4</mn></mfrac><msqrt><mrow><mn>1</mn><mo>-</mo><mfrac><mrow><mn>49</mn><msup><mi>x</mi><mn>2</mn></msup></mrow><mn>16</mn></mfrac></mrow></msqrt></mfrac><mo>)</mo>
+          <mo>=</mo>
+          <mo>-</mo><mfrac><mfrac><mn>21</mn><mn>4</mn></mfrac><mfrac><msqrt><mrow><mn>16</mn><mo>-</mo><mn>49</mn><msup><mi>x</mi><mn>2</mn></msup></mrow></msqrt><mn>4</mn></mfrac></mfrac>
+          <mo>=</mo>
+          <mo>-</mo><mfrac><mn>21</mn><msqrt><mrow><mn>16</mn><mo>-</mo><mn>49</mn><msup><mi>x</mi><mn>2</mn></msup></mrow></msqrt></mfrac>
+        </math>
+      </div>
+    </div>
+
+    <div class="final-box">
+      <span class="label">Resposta Final 1.(b)</span>
+      <div>Como <math><mo>(</mo><mi>f</mi><mo>(</mo><mi>x</mi><mo>)</mo><mo>+</mo><mi>c</mi><msup><mo>)</mo><mo>′</mo></msup><mo>=</mo><mo>-</mo><mfrac><mn>21</mn><msqrt><mrow><mn>16</mn><mo>-</mo><mn>49</mn><msup><mi>x</mi><mn>2</mn></msup></mrow></msqrt></mfrac></math>, fica verificado por definição.</div>
+    </div>
+  </section>
+
+  <!-- 2.(a) -->
+  <section class="card">
+    <div class="card-title">
+      <span>2.(a) Primitiva Tipo Potência</span>
+      <span class="badge">0.75 val</span>
+    </div>
+
+    <div class="step-row">
+      <span class="label">Integral Proposto</span>
+      <div class="math-scroll">
+        <math><mo>∫</mo><mfrac><mn>3</mn><mrow><mi>x</mi><mroot><mrow><mi>ln</mi><mo>(</mo><msup><mi>x</mi><mn>2</mn></msup><mo>)</mo></mrow><mn>3</mn></mroot></mrow></mfrac><mi>d</mi><mi>x</mi></math>
+      </div>
+    </div>
+
+    <div class="step-row">
+      <span class="label">Transformação Algébrica</span>
+      <div class="math-scroll">
+        <math>
+          <mi>ln</mi><mo>(</mo><msup><mi>x</mi><mn>2</mn></msup><mo>)</mo><mo>=</mo><mn>2</mn><mi>ln</mi><mo>|</mo><mi>x</mi><mo>|</mo>
+          <mo>⇒</mo>
+          <mroot><mrow><mi>ln</mi><mo>(</mo><msup><mi>x</mi><mn>2</mn></msup><mo>)</mo></mrow><mn>3</mn></mroot><mo>=</mo><mroot><mn>2</mn><mn>3</mn></mroot><mo>·</mo><mo>(</mo><mi>ln</mi><mo>|</mo><mi>x</mi><mo>|</mo><msup><mo>)</mo><mrow><mn>1</mn><mo>/</mo><mn>3</mn></mrow></msup>
+        </math>
+      </div>
+    </div>
+
+    <div class="step-row">
+      <span class="label">Aplicação da Fórmula</span>
+      <div class="math-scroll">
+        <math>
+          <mfrac><mn>3</mn><mroot><mn>2</mn><mn>3</mn></mroot></mfrac><mo>∫</mo><mfrac><mn>1</mn><mi>x</mi></mfrac><mo>(</mo><mi>ln</mi><mo>|</mo><mi>x</mi><mo>|</mo><msup><mo>)</mo><mrow><mo>-</mo><mn>1</mn><mo>/</mo><mn>3</mn></mrow></msup><mi>d</mi><mi>x</mi>
+          <mo>=</mo>
+          <mfrac><mn>3</mn><mroot><mn>2</mn><mn>3</mn></mroot></mfrac><mo>·</mo><mfrac><mrow><mo>(</mo><mi>ln</mi><mo>|</mo><mi>x</mi><mo>|</mo><msup><mo>)</mo><mrow><mn>2</mn><mo>/</mo><mn>3</mn></mrow></msup></mrow><mfrac><mn>2</mn><mn>3</mn></mfrac></mfrac><mo>+</mo><mi>c</mi>
+        </math>
+      </div>
+    </div>
+
+    <div class="final-box">
+      <span class="label">Resposta Final 2.(a)</span>
+      <div class="math-scroll">
+        <math>
+          <mo>=</mo><mfrac><mn>9</mn><mrow><mn>2</mn><mroot><mn>2</mn><mn>3</mn></mroot></mrow></mfrac><mroot><mrow><msup><mi>ln</mi><mn>2</mn></msup><mo>|</mo><mi>x</mi><mo>|</mo></mrow><mn>3</mn></mroot><mo>+</mo><mi>c</mi>
+          <mo>=</mo>
+          <mfrac><mn>9</mn><mn>4</mn></mfrac><mroot><mrow><msup><mi>ln</mi><mn>2</mn></msup><mo>(</mo><msup><mi>x</mi><mn>2</mn></msup><mo>)</mo></mrow><mn>3</mn></mroot><mo>+</mo><mi>c</mi>
+        </math>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2.(b) -->
+  <section class="card">
+    <div class="card-title">
+      <span>2.(b) Decomposição em Potência e Arcsin</span>
+      <span class="badge">1.25 val</span>
+    </div>
+
+    <div class="step-row">
+      <span class="label">Decomposição em I1 e I2</span>
+      <div class="math-scroll">
+        <math>
+          <mo>∫</mo><mfrac><mrow><mi>x</mi><mo>+</mo><mn>2</mn></mrow><msqrt><mrow><mn>9</mn><mo>-</mo><mn>16</mn><msup><mi>x</mi><mn>2</mn></msup></mrow></msqrt></mfrac><mi>d</mi><mi>x</mi>
+          <mo>=</mo>
+          <munder><mo>∫</mo><msub><mi>I</mi><mn>1</mn></msub></munder><mfrac><mi>x</mi><msqrt><mrow><mn>9</mn><mo>-</mo><mn>16</mn><msup><mi>x</mi><mn>2</mn></msup></mrow></msqrt></mfrac><mi>d</mi><mi>x</mi>
+          <mo>+</mo>
+          <munder><mo>∫</mo><msub><mi>I</mi><mn>2</mn></msub></munder><mfrac><mn>2</mn><msqrt><mrow><mn>9</mn><mo>-</mo><mn>16</mn><msup><mi>x</mi><mn>2</mn></msup></mrow></msqrt></mfrac><mi>d</mi><mi>x</mi>
+        </math>
+      </div>
+    </div>
+
+    <div class="step-row">
+      <span class="label">Cálculo de I1 (Potência)</span>
+      <div class="math-scroll">
+        <math>
+          <msub><mi>I</mi><mn>1</mn></msub><mo>=</mo><mo>-</mo><mfrac><mn>1</mn><mn>32</mn></mfrac><mo>∫</mo><mo>(</mo><mo>-</mo><mn>32</mn><mi>x</mi><mo>)</mo><mo>(</mo><mn>9</mn><mo>-</mo><mn>16</mn><msup><mi>x</mi><mn>2</mn></msup><msup><mo>)</mo><mrow><mo>-</mo><mn>1</mn><mo>/</mo><mn>2</mn></mrow></msup><mi>d</mi><mi>x</mi>
+          <mo>=</mo>
+          <mo>-</mo><mfrac><mn>1</mn><mn>16</mn></mfrac><msqrt><mrow><mn>9</mn><mo>-</mo><mn>16</mn><msup><mi>x</mi><mn>2</mn></msup></mrow></msqrt>
+        </math>
+      </div>
+    </div>
+
+    <div class="step-row">
+      <span class="label">Cálculo de I2 (Arcsin)</span>
+      <div class="math-scroll">
+        <math>
+          <msub><mi>I</mi><mn>2</mn></msub><mo>=</mo><mfrac><mn>2</mn><mn>3</mn></mfrac><mo>·</mo><mfrac><mn>3</mn><mn>4</mn></mfrac><mo>∫</mo><mfrac><mfrac><mn>4</mn><mn>3</mn></mfrac><msqrt><mrow><mn>1</mn><mo>-</mo><mo>(</mo><mfrac><mrow><mn>4</mn><mi>x</mi></mrow><mn>3</mn></mfrac><msup><mo>)</mo><mn>2</mn></msup></mrow></msqrt></mfrac><mi>d</mi><mi>x</mi>
+          <mo>=</mo>
+          <mfrac><mn>1</mn><mn>2</mn></mfrac><mi>arcsin</mi><mo>(</mo><mfrac><mrow><mn>4</mn><mi>x</mi></mrow><mn>3</mn></mfrac><mo>)</mo>
+        </math>
+      </div>
+    </div>
+
+    <div class="final-box">
+      <span class="label">Resposta Final 2.(b)</span>
+      <div class="math-scroll">
+        <math>
+          <mo>=</mo><mo>-</mo><mfrac><mn>1</mn><mn>16</mn></mfrac><msqrt><mrow><mn>9</mn><mo>-</mo><mn>16</mn><msup><mi>x</mi><mn>2</mn></msup></mrow></msqrt><mo>+</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mi>arcsin</mi><mo>(</mo><mfrac><mrow><mn>4</mn><mi>x</mi></mrow><mn>3</mn></mfrac><mo>)</mo><mo>+</mo><mi>c</mi>
+        </math>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2.(c) -->
+  <section class="card">
+    <div class="card-title">
+      <span>2.(c) Primitiva Trigonométrica</span>
+      <span class="badge">0.75 val</span>
+    </div>
+
+    <div class="step-row">
+      <span class="label">Integral Proposto</span>
+      <div class="math-scroll">
+        <math>
+          <mo>∫</mo><mfrac><mrow><msup><mi>sec</mi><mn>2</mn></msup><mo>(</mo><mn>2</mn><mi>x</mi><mo>)</mo></mrow><msqrt><mrow><mi>tan</mi><mo>(</mo><mn>2</mn><mi>x</mi><mo>)</mo></mrow></msqrt></mfrac><mi>d</mi><mi>x</mi>
+          <mo>=</mo>
+          <mo>∫</mo><msup><mi>sec</mi><mn>2</mn></msup><mo>(</mo><mn>2</mn><mi>x</mi><mo>)</mo><mo>·</mo><mo>(</mo><mi>tan</mi><mo>(</mo><mn>2</mn><mi>x</mi><mo>)</mo><msup><mo>)</mo><mrow><mo>-</mo><mn>1</mn><mo>/</mo><mn>2</mn></mrow></msup><mi>d</mi><mi>x</mi>
+        </math>
+      </div>
+    </div>
+
+    <div class="step-row">
+      <span class="label">Ajuste e Cálculo</span>
+      <div class="math-scroll">
+        <math>
+          <mfrac><mn>1</mn><mn>2</mn></mfrac><mo>∫</mo><mn>2</mn><msup><mi>sec</mi><mn>2</mn></msup><mo>(</mo><mn>2</mn><mi>x</mi><mo>)</mo><mo>·</mo><mo>(</mo><mi>tan</mi><mo>(</mo><mn>2</mn><mi>x</mi><mo>)</mo><msup><mo>)</mo><mrow><mo>-</mo><mn>1</mn><mo>/</mo><mn>2</mn></mrow></msup><mi>d</mi><mi>x</mi>
+          <mo>=</mo>
+          <mfrac><mn>1</mn><mn>2</mn></mfrac><mo>·</mo><mfrac><mrow><mo>(</mo><mi>tan</mi><mo>(</mo><mn>2</mn><mi>x</mi><mo>)</mo><msup><mo>)</mo><mrow><mn>1</mn><mo>/</mo><mn>2</mn></mrow></msup></mrow><mfrac><mn>1</mn><mn>2</mn></mfrac></mfrac><mo>+</mo><mi>c</mi>
+        </math>
+      </div>
+    </div>
+
+    <div class="final-box">
+      <span class="label">Resposta Final 2.(c)</span>
+      <div class="math-scroll">
+        <math>
+          <mo>=</mo><msqrt><mrow><mi>tan</mi><mo>(</mo><mn>2</mn><mi>x</mi><mo>)</mo></mrow></msqrt><mo>+</mo><mi>c</mi><mo>,</mo><mspace width="0.5em"/><mi>c</mi><mo>∈</mo><mi mathvariant="double-struck">R</mi>
+        </math>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>
